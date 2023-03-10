@@ -12,6 +12,17 @@
 ## 3. Реализовать контейнеризацию фронтенд и бэкенд приложений
 > Вопросы по запуску приложений можно задать на почту i.zhdanovich@softteco.com
 
+> На стороне бд:
+```
+CREATE TABLE IF NOT EXISTS `tutorials` (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  title varchar(255) NOT NULL,
+  description varchar(255),
+  published BOOLEAN DEFAULT false
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+
 ## 4. Запустить фронтенд и бэкенд приложения при помощи docker-compose
 - ##### Изменить конфигурацию приложений для работы в docker-compose
 - ##### В качестве БД использовать MySQL
@@ -38,13 +49,3 @@
 - ##### Канал telegram должен иметь приватный статус
 - ##### Проверка должна проводиться каждые 3 минуты
 
-
-> На стороне бд:
-```
-CREATE TABLE IF NOT EXISTS `tutorials` (
-  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  title varchar(255) NOT NULL,
-  description varchar(255),
-  published BOOLEAN DEFAULT false
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-```
